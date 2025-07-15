@@ -18,6 +18,13 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic pop
 
 @property (class, nonatomic, readonly) GBAEmulatorBridge *sharedBridge;
+- (int) startServer;
+- (void) startLink;
+- (int) closeConnection;
+- (int) tryConncection;
+- (int) getSlaves;
+- (int) getLinkID;
+- (int) startClient:(NSString *)serverIP;
 
 @end
 

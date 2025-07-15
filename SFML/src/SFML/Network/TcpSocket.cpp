@@ -219,8 +219,8 @@ void TcpSocket::disconnect()
 ////////////////////////////////////////////////////////////
 Socket::Status TcpSocket::send(const void* data, std::size_t size)
 {
-    if (!isBlocking())
-        err() << "Warning: Partial sends might not be handled properly." << std::endl;
+//    if (!isBlocking())
+//        err() << "Warning: Partial sends might not be handled properly." << std::endl;
 
     std::size_t sent;
 

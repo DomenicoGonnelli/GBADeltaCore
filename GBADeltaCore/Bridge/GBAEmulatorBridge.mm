@@ -18,8 +18,9 @@
 #include "gba/Cheats.h"
 #include "gba/RTC.h"
 #include "Util.h"
-
+#include "gba/GBALink.h"
 #include <sys/time.h>
+
 
 // DeltaCore
 #import <GBADeltaCore/GBADeltaCore.h>
@@ -94,38 +95,107 @@ int  RGB_LOW_BITS_MASK;
 {
     self.gameURL = URL;
     
+    NSString *urlString = [_gameURL path];
+    // Converti la stringa in minuscolo per una comparazione case-insensitive
+    NSString *lowerCaseUrlString = [urlString lowercaseString];
+    
+    // Verifica l'estensione del file
+    if ([lowerCaseUrlString hasSuffix:@".gb"]) {
+        isGB = true;
+        NSLog(@"Il gioco è un Game Boy (GB) con estensione .gb");
+    } else if ([lowerCaseUrlString hasSuffix:@".gbc"]) {
+        isGB = true;
+        NSLog(@"Il gioco è un Game Boy Color (GBC) con estensione .gbc");
+    } else {
+        isGB = false;
+        NSLog(@"L'estensione del gioco non è né .gb né .gbc");
+        // Potresti voler gestire altri tipi di file qui o impostare entrambi a NO
+    }
+    
     NSData *data = [NSData dataWithContentsOfURL:URL];
     
     if (!CPULoadRomData((const char *)data.bytes, (int)data.length))
     {
         return;
     }
-        
+    
     utilUpdateSystemColorMaps(NO);
-    utilGBAFindSave((int)data.length);
     
-    // Update per-game settings after utilGBAFindSave determines defaults.
-    [self updateGameSettings];
+    if(!isGB){
+        utilGBAFindSave((int)data.length);
+        [self updateGameSettings];
+    }
     
-    soundInit();
-    soundSetSampleRate(32768); // 44100 chirps
+     soundInit();
+     soundSetSampleRate(32768); // 44100 chirps
+     soundReset();
     
-    soundReset();
     
     CPUInit(0, false);
-    
-    GBASystem.emuReset();
+    getSystem().emuReset();
     
     emulating = 1;
 }
 
+- (int) startServer {
+    int linkType = isGB ? LINK_GAMEBOY_SOCKET : LINK_CABLE_SOCKET;
+    const char *serverIP = "0.0.0.0"; // ascolta su tutte le interfacce
+    int timeout = 20;
+    bool enableHacks = NO;
+    int numPlayers = 1;
+    EnableLinkServer(true, 1);
+    return BootLink(linkType, serverIP, timeout, enableHacks, numPlayers);
+   
+}
+
+- (int) tryConncection {
+    char message[256];
+    printf("[DEBUG] Server/Client: ConnectLinkUpdate: %s\n", message);
+    ConnectionState state = ConnectLinkUpdate(message, sizeof(message));
+    return state;
+}
+
+
+- (int) closeConnection {
+    printf("[DEBUG] Server/Client: close connection");
+    CloseLink();
+    CleanLocalLink();
+    return LINK_ABORT;
+}
+
+- (int) getSlaves {
+    return GetNumberSlaves();
+}
+
+- (int) getLinkID {
+    return GetPlayerID();
+}
+
+
+- (int) getStatus {
+    //not needed
+    printf("[DEBUG] Server: startLink: start\n");
+    //uint16_t siocnt = 0x2000 | 0x80;
+    printf("[DEBUG] Server: startLink: end \n");
+}
+
+
+- (int) startClient:(NSString *)serverIP {
+    int linkType = isGB ? LINK_GAMEBOY_SOCKET : LINK_CABLE_SOCKET;
+    const char *IP = [serverIP UTF8String];
+    int timeout = 20;
+    bool enableHacks = NO;
+    int numPlayers = 1;
+    EnableLinkServer(false,1);
+    return BootLink(linkType, IP, timeout, enableHacks, numPlayers);
+    
+}
+
 - (void)stop
 {
-    GBASystem.emuCleanUp();
+    getSystem().emuCleanUp();
     soundShutdown();
-    
     emulating = 0;
-    
     [self deactivateGyroscope];
 }
 
@@ -147,7 +217,7 @@ int  RGB_LOW_BITS_MASK;
     
     while (![self isFrameReady])
     {
-        GBASystem.emuMain(GBASystem.emuCount);
+        getSystem().emuMain(getSystem().emuCount);
     }
 }
 
@@ -301,24 +371,25 @@ int  RGB_LOW_BITS_MASK;
 
 - (void)saveGameSaveToURL:(NSURL *)URL
 {
-    GBASystem.emuWriteBattery(URL.fileSystemRepresentation);
+    
+    getSystem().emuWriteBattery(URL.fileSystemRepresentation);
 }
 
 - (void)loadGameSaveFromURL:(NSURL *)URL
 {
-    GBASystem.emuReadBattery(URL.fileSystemRepresentation);
+    getSystem().emuReadBattery(URL.fileSystemRepresentation);
 }
 
 #pragma mark - Save States -
 
 - (void)saveSaveStateToURL:(NSURL *)URL
 {
-    GBASystem.emuWriteState(URL.fileSystemRepresentation);
+    getSystem().emuWriteState(URL.fileSystemRepresentation);
 }
 
 - (void)loadSaveStateFromURL:(NSURL *)URL
 {
-    GBASystem.emuReadState(URL.fileSystemRepresentation);
+    getSystem().emuReadState(URL.fileSystemRepresentation);
 }
 
 #pragma mark - Cheats -
@@ -418,7 +489,12 @@ void systemDrawScreen()
     // Get rid of the first line and the last row
     for (int y = 0; y < 160; y++)
     {
-        memcpy([GBAEmulatorBridge sharedBridge].videoRenderer.videoBuffer + y * 240 * 4, pix + (y + 1) * (240 + 1) * 4, 240 * 4);
+        if(isGB){
+            memcpy([GBAEmulatorBridge sharedBridge].videoRenderer.videoBuffer + y * 160 * 4, pix + (y + 1) * (160 + 1) * 4, 160 * 4);
+        } else {
+            memcpy([GBAEmulatorBridge sharedBridge].videoRenderer.videoBuffer + y * 240 * 4, pix + (y + 1) * (240 + 1) * 4, 240 * 4);
+        }
+        
     }
     
     [[GBAEmulatorBridge sharedBridge].videoRenderer processFrame];
@@ -578,9 +654,11 @@ void log(const char *defaultMsg, ...)
         out = fopen("trace.log","w");
     }
     
-    va_list valist;
     
-    va_start(valist, defaultMsg);
-    vfprintf(out, defaultMsg, valist);
-    va_end(valist);
+    if(out != NULL) {
+        va_list valist;
+        va_start(valist, defaultMsg);
+        vfprintf(out, defaultMsg, valist);
+        va_end(valist);
+    }
 }
