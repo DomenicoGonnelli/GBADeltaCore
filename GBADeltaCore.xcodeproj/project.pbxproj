@@ -820,8 +820,8 @@
 				BF28800B1EB592A70027FC53 /* AutoBuild.h */,
 				BF28800C1EB592A70027FC53 /* common */,
 				BF28808E1EB5944A0027FC53 /* fex */,
-				BF2880201EB592A70027FC53 /* gba */,
 				BF2883FE1EB5B8950027FC53 /* gb */,
+				BF2880201EB592A70027FC53 /* gba */,
 				BF2880591EB592A70027FC53 /* NLS.h */,
 				BF28805A1EB592A70027FC53 /* System.h */,
 				BF28805B1EB592A70027FC53 /* Util.cpp */,
@@ -1488,9 +1488,15 @@
 				DEVELOPMENT_TEAM = 6XVY5G3U44;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/SFML/include\"",
+					"\"$(SRCROOT)/SFML/src\"",
+					"\"$(SRCROOT)/visualboyadvance-m/src/**\"/**",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "VBA-M";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/visualboyadvance-m/fex\" \"$(SRCROOT)/visualboyadvance-m/src/**\"";
 			};
 			name = Debug;
 		};
@@ -1501,9 +1507,15 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				DEVELOPMENT_TEAM = 6XVY5G3U44;
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/SFML/include\"",
+					"\"$(SRCROOT)/SFML/src\"",
+					"\"$(SRCROOT)/visualboyadvance-m/src/**\"/**",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "VBA-M";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/visualboyadvance-m/fex\" \"$(SRCROOT)/visualboyadvance-m/src/**\"";
 			};
 			name = Release;
 		};
