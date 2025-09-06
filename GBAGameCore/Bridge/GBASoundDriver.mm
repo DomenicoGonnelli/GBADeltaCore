@@ -6,8 +6,8 @@
 #import "GBASoundDriver.h"
 #import "GBAEmulatorBridge.h"
 
-#import <DeltaCore/DeltaCore.h>
-#import <DeltaCore/DeltaCore-Swift.h>
+#import <GameCore/GameCore.h>
+#import <GameCore/GameCore-Swift.h>
 
 GBASoundDriver::GBASoundDriver()
 {

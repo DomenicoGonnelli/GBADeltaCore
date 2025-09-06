@@ -3,7 +3,7 @@
 //  GBADeltaCore
 ////
 
-#import <DeltaCore/DeltaTypes.h>
+#import <GameCore/DeltaTypes.h>
 
 // Extensible Enums
 FOUNDATION_EXPORT GameType const GameTypeGBA NS_SWIFT_NAME(gba);
