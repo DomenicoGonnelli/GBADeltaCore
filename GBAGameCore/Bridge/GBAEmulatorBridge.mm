@@ -2,8 +2,6 @@
 //  GBAEmulatorBridge.m
 //  GBADeltaCore
 //
-//  Created by Riley Testut on 6/3/16.
-//  Copyright © 2016 Riley Testut. All rights reserved.
 //
 
 #import "GBAEmulatorBridge.h"
@@ -23,15 +21,15 @@
 
 
 // DeltaCore
-#import <GBADeltaCore/GBADeltaCore.h>
-#import <DeltaCore/DeltaCore.h>
-#import <DeltaCore/DeltaCore-Swift.h>
+#import <GBAGameCore/GBAGameCore.h>
+#import <GameCore/GameCore.h>
+#import <GameCore/GameCore-Swift.h>
 
 #if STATIC_LIBRARY
-#import "GBADeltaCore-Swift.h"
+#import "GBAGameCore-Swift.h"
 #import "GBATypes.h"
 #else
-#import <GBADeltaCore/GBADeltaCore-Swift.h>
+#import <GBAGameCore/GBAGameCore-Swift.h>
 #endif
 
 // Required vars, used by the emulator core

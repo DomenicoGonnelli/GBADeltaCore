@@ -2,14 +2,12 @@
 //  GBA.swift
 //  GBADeltaCore
 //
-//  Created by Riley Testut on 6/3/16.
-//  Copyright © 2016 Riley Testut. All rights reserved.
 //
 
 import Foundation
 import AVFoundation
 
-import DeltaCore
+import GameCore
 
 public extension GBA
 {

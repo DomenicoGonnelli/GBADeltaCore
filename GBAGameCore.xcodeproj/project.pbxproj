@@ -11,7 +11,7 @@
 		BF0417321D01D9E000E85BCF /* GBAEmulatorBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = BF0417301D01D9E000E85BCF /* GBAEmulatorBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF0417331D01D9E000E85BCF /* GBAEmulatorBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF0417311D01D9E000E85BCF /* GBAEmulatorBridge.mm */; };
 		BF0418171D01E9C000E85BCF /* GBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0418161D01E9C000E85BCF /* GBA.swift */; };
-		BF0BFE2523E36D2800E0FC00 /* DeltaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0BFE2423E36D2800E0FC00 /* DeltaCore.framework */; };
+		BF0BFE2523E36D2800E0FC00 /* GameCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0BFE2423E36D2800E0FC00 /* GameCore.framework */; };
 		BF28805F1EB592A70027FC53 /* Blip_Buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF2880001EB592A70027FC53 /* Blip_Buffer.cpp */; };
 		BF2880601EB592A70027FC53 /* Effects_Buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF2880021EB592A70027FC53 /* Effects_Buffer.cpp */; };
 		BF2880611EB592A70027FC53 /* Gb_Apu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF2880041EB592A70027FC53 /* Gb_Apu.cpp */; };
@@ -234,8 +234,8 @@
 		BF917D2422261A9B00901726 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF917D2322261A9B00901726 /* CoreMotion.framework */; };
 		BFBFF3471EB5BB6A005D9792 /* vba-over.ini in Resources */ = {isa = PBXBuildFile; fileRef = BF28805D1EB592A70027FC53 /* vba-over.ini */; };
 		BFD5EB0F1D304D21001487DC /* GBATypes.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD5EB0E1D304D21001487DC /* GBATypes.m */; };
-		BFD5EB231D305B48001487DC /* Standard.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = BFD5EB221D305B48001487DC /* Standard.deltaskin */; };
-		BFE8E9CE1D010AF7009D623D /* GBADeltaCore.h in Headers */ = {isa = PBXBuildFile; fileRef = BFE8E9CD1D010AF7009D623D /* GBADeltaCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BFD5EB231D305B48001487DC /* Standard.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = BFD5EB221D305B48001487DC /* Standard.dgskin */; };
+		BFE8E9CE1D010AF7009D623D /* GBAGameCore.h in Headers */ = {isa = PBXBuildFile; fileRef = BFE8E9CD1D010AF7009D623D /* GBAGameCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -265,7 +265,7 @@
 		BF0417301D01D9E000E85BCF /* GBAEmulatorBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBAEmulatorBridge.h; sourceTree = "<group>"; };
 		BF0417311D01D9E000E85BCF /* GBAEmulatorBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GBAEmulatorBridge.mm; sourceTree = "<group>"; };
 		BF0418161D01E9C000E85BCF /* GBA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GBA.swift; sourceTree = "<group>"; };
-		BF0BFE2423E36D2800E0FC00 /* DeltaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF0BFE2423E36D2800E0FC00 /* GameCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GameCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF287FF21EB590F90027FC53 /* libVBA-M.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libVBA-M.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF287FFD1EB592A70027FC53 /* blargg_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blargg_common.h; sourceTree = "<group>"; };
 		BF287FFE1EB592A70027FC53 /* blargg_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blargg_config.h; sourceTree = "<group>"; };
@@ -557,9 +557,9 @@
 		BF7A908B1D02708700A3617D /* GBASoundDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBASoundDriver.h; sourceTree = "<group>"; };
 		BF917D2322261A9B00901726 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		BFD5EB0E1D304D21001487DC /* GBATypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBATypes.m; sourceTree = "<group>"; };
-		BFD5EB221D305B48001487DC /* Standard.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; name = Standard.deltaskin; path = "Controller Skin/Standard.deltaskin"; sourceTree = "<group>"; };
-		BFE8E9CA1D010AF7009D623D /* GBADeltaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GBADeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFE8E9CD1D010AF7009D623D /* GBADeltaCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBADeltaCore.h; sourceTree = "<group>"; };
+		BFD5EB221D305B48001487DC /* Standard.dgskin */ = {isa = PBXFileReference; lastKnownFileType = file; name = Standard.dgskin; path = "Controller Skin/Standard.dgskin"; sourceTree = "<group>"; };
+		BFE8E9CA1D010AF7009D623D /* GBAGameCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GBAGameCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFE8E9CD1D010AF7009D623D /* GBAGameCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBAGameCore.h; sourceTree = "<group>"; };
 		BFE8E9CF1D010AF7009D623D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -577,7 +577,7 @@
 			files = (
 				BF917D2422261A9B00901726 /* CoreMotion.framework in Frameworks */,
 				BF2881031EB5963C0027FC53 /* libVBA-M.a in Frameworks */,
-				BF0BFE2523E36D2800E0FC00 /* DeltaCore.framework in Frameworks */,
+				BF0BFE2523E36D2800E0FC00 /* GameCore.framework in Frameworks */,
 				BF04171C1D01D55500E85BCF /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,7 +599,7 @@
 		BF0418111D01E63000E85BCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BF0BFE2423E36D2800E0FC00 /* DeltaCore.framework */,
+				BF0BFE2423E36D2800E0FC00 /* GameCore.framework */,
 				BF917D2322261A9B00901726 /* CoreMotion.framework */,
 				BF04171B1D01D55500E85BCF /* libz.tbd */,
 			);
@@ -610,7 +610,7 @@
 			isa = PBXGroup;
 			children = (
 				BFE8E9CF1D010AF7009D623D /* Info.plist */,
-				BFD5EB221D305B48001487DC /* Standard.deltaskin */,
+				BFD5EB221D305B48001487DC /* Standard.dgskin */,
 				BF6424861F5CCC6600D6AB44 /* Standard.deltamapping */,
 				BF28805D1EB592A70027FC53 /* vba-over.ini */,
 			);
@@ -1102,7 +1102,7 @@
 		BFE8E9C01D010AF7009D623D = {
 			isa = PBXGroup;
 			children = (
-				BFE8E9CC1D010AF7009D623D /* GBADeltaCore */,
+				BFE8E9CC1D010AF7009D623D /* GBAGameCore */,
 				BF287FF31EB590F90027FC53 /* libVBA-M */,
 				BF0418111D01E63000E85BCF /* Frameworks */,
 				BFE8E9CB1D010AF7009D623D /* Products */,
@@ -1112,22 +1112,22 @@
 		BFE8E9CB1D010AF7009D623D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BFE8E9CA1D010AF7009D623D /* GBADeltaCore.framework */,
+				BFE8E9CA1D010AF7009D623D /* GBAGameCore.framework */,
 				BF287FF21EB590F90027FC53 /* libVBA-M.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BFE8E9CC1D010AF7009D623D /* GBADeltaCore */ = {
+		BFE8E9CC1D010AF7009D623D /* GBAGameCore */ = {
 			isa = PBXGroup;
 			children = (
-				BFE8E9CD1D010AF7009D623D /* GBADeltaCore.h */,
+				BFE8E9CD1D010AF7009D623D /* GBAGameCore.h */,
 				BF0418161D01E9C000E85BCF /* GBA.swift */,
 				BF04172F1D01D99900E85BCF /* Bridge */,
 				BF69FBC223E3A4E10051BEEA /* Types */,
 				BF0418121D01E63900E85BCF /* Supporting Files */,
 			);
-			path = GBADeltaCore;
+			path = GBAGameCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1242,7 +1242,7 @@
 				BF2882D81EB596870027FC53 /* Thread.hpp in Headers */,
 				BF2882E71EB596870027FC53 /* Event.hpp in Headers */,
 				BF2882A61EB596870027FC53 /* Glsl.hpp in Headers */,
-				BFE8E9CE1D010AF7009D623D /* GBADeltaCore.h in Headers */,
+				BFE8E9CE1D010AF7009D623D /* GBAGameCore.h in Headers */,
 				BF2882C01EB596870027FC53 /* Http.hpp in Headers */,
 				BF2882BB1EB596870027FC53 /* View.hpp in Headers */,
 				BF2882E41EB596870027FC53 /* System.hpp in Headers */,
@@ -1276,9 +1276,9 @@
 			productReference = BF287FF21EB590F90027FC53 /* libVBA-M.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		BFE8E9C91D010AF7009D623D /* GBADeltaCore */ = {
+		BFE8E9C91D010AF7009D623D /* GBAGameCore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BFE8E9D21D010AF7009D623D /* Build configuration list for PBXNativeTarget "GBADeltaCore" */;
+			buildConfigurationList = BFE8E9D21D010AF7009D623D /* Build configuration list for PBXNativeTarget "GBAGameCore" */;
 			buildPhases = (
 				BFE8E9C51D010AF7009D623D /* Sources */,
 				BFE8E9C61D010AF7009D623D /* Frameworks */,
@@ -1290,9 +1290,9 @@
 			dependencies = (
 				BF2881021EB5962B0027FC53 /* PBXTargetDependency */,
 			);
-			name = GBADeltaCore;
+			name = GBAGameCore;
 			productName = GBADeltaCore;
-			productReference = BFE8E9CA1D010AF7009D623D /* GBADeltaCore.framework */;
+			productReference = BFE8E9CA1D010AF7009D623D /* GBAGameCore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1315,7 +1315,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BFE8E9C41D010AF7009D623D /* Build configuration list for PBXProject "GBADeltaCore" */;
+			buildConfigurationList = BFE8E9C41D010AF7009D623D /* Build configuration list for PBXProject "GBAGameCore" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1329,7 +1329,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BFE8E9C91D010AF7009D623D /* GBADeltaCore */,
+				BFE8E9C91D010AF7009D623D /* GBAGameCore */,
 				BF287FF11EB590F90027FC53 /* libVBA-M */,
 			);
 		};
@@ -1344,7 +1344,7 @@
 				BFBFF3471EB5BB6A005D9792 /* vba-over.ini in Resources */,
 				BF2882E11EB596870027FC53 /* Vector2.inl in Resources */,
 				BF2882971EB596870027FC53 /* SoundFileFactory.inl in Resources */,
-				BFD5EB231D305B48001487DC /* Standard.deltaskin in Resources */,
+				BFD5EB231D305B48001487DC /* Standard.dgskin in Resources */,
 				BF2882D71EB596870027FC53 /* String.inl in Resources */,
 				BF2882A71EB596870027FC53 /* Glsl.inl in Resources */,
 				BF2882E31EB596870027FC53 /* Vector3.inl in Resources */,
@@ -1673,10 +1673,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = GBADeltaCore/Info.plist;
+				INFOPLIST_FILE = GBAGameCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rileytestut.GBADeltaCore;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.domenico.gonnelli.core.gba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1694,10 +1694,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_OPTIMIZATION_LEVEL = s;
-				INFOPLIST_FILE = GBADeltaCore/Info.plist;
+				INFOPLIST_FILE = GBAGameCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rileytestut.GBADeltaCore;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.domenico.gonnelli.core.gba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1717,7 +1717,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BFE8E9C41D010AF7009D623D /* Build configuration list for PBXProject "GBADeltaCore" */ = {
+		BFE8E9C41D010AF7009D623D /* Build configuration list for PBXProject "GBAGameCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BFE8E9D01D010AF7009D623D /* Debug */,
@@ -1726,7 +1726,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BFE8E9D21D010AF7009D623D /* Build configuration list for PBXNativeTarget "GBADeltaCore" */ = {
+		BFE8E9D21D010AF7009D623D /* Build configuration list for PBXNativeTarget "GBAGameCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BFE8E9D31D010AF7009D623D /* Debug */,

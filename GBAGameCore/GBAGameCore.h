@@ -2,8 +2,6 @@
 //  GBADeltaCore.h
 //  GBADeltaCore
 //
-//  Created by Riley Testut on 6/2/16.
-//  Copyright © 2016 Riley Testut. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -16,6 +14,6 @@ FOUNDATION_EXPORT const unsigned char GBADeltaCoreVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <GBADeltaCore/PublicHeader.h>
 #if !STATIC_LIBRARY
-#import <GBADeltaCore/GBAEmulatorBridge.h>
-#import <GBADeltaCore/GBATypes.h>
+#import <GBAGameCore/GBAEmulatorBridge.h>
+#import <GBAGameCore/GBATypes.h>
 #endif
