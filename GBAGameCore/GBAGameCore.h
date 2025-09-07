@@ -1,15 +1,15 @@
 //
-//  GBADeltaCore.h
+//  GBAGameCore.h
 //  GBADeltaCore
 //
 //
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for GBADeltaCore.
+//! Project version number for GBAGameCore.
 FOUNDATION_EXPORT double GBADeltaCoreVersionNumber;
 
-//! Project version string for GBADeltaCore.
+//! Project version string for GBAGameCore.
 FOUNDATION_EXPORT const unsigned char GBADeltaCoreVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <GBADeltaCore/PublicHeader.h>

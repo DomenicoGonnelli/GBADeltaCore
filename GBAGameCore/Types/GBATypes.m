@@ -1,5 +1,5 @@
 //
-//  GBADeltaCore.m
+//  GBAGameCore.m
 //  GBADeltaCore
 //
 
