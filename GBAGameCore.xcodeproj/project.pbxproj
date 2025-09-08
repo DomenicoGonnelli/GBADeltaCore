@@ -227,15 +227,15 @@
 		BF2884471EB5BA6F0027FC53 /* LzmaDec.c in Sources */ = {isa = PBXBuildFile; fileRef = BF2880A61EB594560027FC53 /* LzmaDec.c */; };
 		BF2884481EB5BA6F0027FC53 /* Ppmd7.c in Sources */ = {isa = PBXBuildFile; fileRef = BF2880A91EB594560027FC53 /* Ppmd7.c */; };
 		BF2884491EB5BA6F0027FC53 /* Ppmd7Dec.c in Sources */ = {isa = PBXBuildFile; fileRef = BF2880AB1EB594560027FC53 /* Ppmd7Dec.c */; };
-		BF6424871F5CCD0A00D6AB44 /* Standard.dgmapping in Resources */ = {isa = PBXBuildFile; fileRef = BF6424861F5CCC6600D6AB44 /* Standard.dgmapping */; };
 		BF69FBC123E39E420051BEEA /* GBATypes.h in Headers */ = {isa = PBXBuildFile; fileRef = BF69FBC023E39E420051BEEA /* GBATypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF7A908C1D02708700A3617D /* GBASoundDriver.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF7A908A1D02708700A3617D /* GBASoundDriver.mm */; };
 		BF7A908D1D02708700A3617D /* GBASoundDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7A908B1D02708700A3617D /* GBASoundDriver.h */; };
 		BF917D2422261A9B00901726 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF917D2322261A9B00901726 /* CoreMotion.framework */; };
 		BFBFF3471EB5BB6A005D9792 /* vba-over.ini in Resources */ = {isa = PBXBuildFile; fileRef = BF28805D1EB592A70027FC53 /* vba-over.ini */; };
 		BFD5EB0F1D304D21001487DC /* GBATypes.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD5EB0E1D304D21001487DC /* GBATypes.m */; };
-		BFD5EB231D305B48001487DC /* Standard.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = BFD5EB221D305B48001487DC /* Standard.dgskin */; };
 		BFE8E9CE1D010AF7009D623D /* GBAGameCore.h in Headers */ = {isa = PBXBuildFile; fileRef = BFE8E9CD1D010AF7009D623D /* GBAGameCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB55DFCC2E6EEF8D0028EDA9 /* Standard.dgmapping in Resources */ = {isa = PBXBuildFile; fileRef = EB55DFCA2E6EE7C80028EDA9 /* Standard.dgmapping */; };
+		EB55DFCD2E6EEF8D0028EDA9 /* Standard.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = BFD5EB221D305B48001487DC /* Standard.dgskin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -551,7 +551,6 @@
 		BF2884201EB5B8F70027FC53 /* BreakpointStructures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BreakpointStructures.h; sourceTree = "<group>"; };
 		BF2884221EB5B93A0027FC53 /* remote.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = remote.cpp; sourceTree = "<group>"; };
 		BF2884231EB5B93A0027FC53 /* remote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = remote.h; sourceTree = "<group>"; };
-		BF6424861F5CCC6600D6AB44 /* Standard.dgmapping */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Standard.dgmapping; sourceTree = "<group>"; };
 		BF69FBC023E39E420051BEEA /* GBATypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBATypes.h; sourceTree = "<group>"; };
 		BF7A908A1D02708700A3617D /* GBASoundDriver.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GBASoundDriver.mm; sourceTree = "<group>"; };
 		BF7A908B1D02708700A3617D /* GBASoundDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBASoundDriver.h; sourceTree = "<group>"; };
@@ -561,6 +560,7 @@
 		BFE8E9CA1D010AF7009D623D /* GBAGameCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GBAGameCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE8E9CD1D010AF7009D623D /* GBAGameCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBAGameCore.h; sourceTree = "<group>"; };
 		BFE8E9CF1D010AF7009D623D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB55DFCA2E6EE7C80028EDA9 /* Standard.dgmapping */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Standard.dgmapping; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -609,9 +609,9 @@
 		BF0418121D01E63900E85BCF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB55DFCA2E6EE7C80028EDA9 /* Standard.dgmapping */,
 				BFE8E9CF1D010AF7009D623D /* Info.plist */,
 				BFD5EB221D305B48001487DC /* Standard.dgskin */,
-				BF6424861F5CCC6600D6AB44 /* Standard.dgmapping */,
 				BF28805D1EB592A70027FC53 /* vba-over.ini */,
 			);
 			name = "Supporting Files";
@@ -1340,17 +1340,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB55DFCC2E6EEF8D0028EDA9 /* Standard.dgmapping in Resources */,
+				EB55DFCD2E6EEF8D0028EDA9 /* Standard.dgskin in Resources */,
 				BF2882DC1EB596870027FC53 /* ThreadLocalPtr.inl in Resources */,
 				BFBFF3471EB5BB6A005D9792 /* vba-over.ini in Resources */,
 				BF2882E11EB596870027FC53 /* Vector2.inl in Resources */,
 				BF2882971EB596870027FC53 /* SoundFileFactory.inl in Resources */,
-				BFD5EB231D305B48001487DC /* Standard.dgskin in Resources */,
 				BF2882D71EB596870027FC53 /* String.inl in Resources */,
 				BF2882A71EB596870027FC53 /* Glsl.inl in Resources */,
 				BF2882E31EB596870027FC53 /* Vector3.inl in Resources */,
 				BF2882D91EB596870027FC53 /* Thread.inl in Resources */,
 				BF2882DF1EB596870027FC53 /* Utf.inl in Resources */,
-				BF6424871F5CCD0A00D6AB44 /* Standard.dgmapping in Resources */,
 				BF2882AC1EB596870027FC53 /* Rect.inl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
