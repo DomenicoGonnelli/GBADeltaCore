@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
   spec.public_header_files = "GBAGameCore/Types/GBATypes.h", "GBAGameCore/Bridge/GBAEmulatorBridge.h", "GBAGameCore/GBAGameCore.h"
   spec.header_mappings_dir = ""
   spec.resource_bundles = {
-    "GBAGameCore" => ["GBAGameCore/**/*.deltamapping", "GBAGameCore/**/*.dgskin", "visualboyadvance-m/src/vba-over.ini"]
+    "GBAGameCore" => ["GBAGameCore/**/*.dgmapping", "GBAGameCore/**/*.dgskin", "visualboyadvance-m/src/vba-over.ini"]
   }
   
   spec.dependency 'GameCore'
