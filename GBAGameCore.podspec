@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.description  = "iOS framework that wraps VBA-M to allow playing Game Boy Advance games"
   spec.homepage     = "https://github.com/DomenicoGonnelli/GBA-iOS"
   spec.platform     = :ios, "14.0"
-  spec.source       = { :git => "https://github.com/DomenicoGonnelli/GBADeltaCore.git" }
+  spec.source       = { :git => "https://github.com/DomenicoGonnelli/GBAGameCore.git" }
 
   spec.author             = { "Domenico Gonnelli" => "domenico.gonnelli@outlook.it" }
   
