@@ -236,6 +236,8 @@
 		BFE8E9CE1D010AF7009D623D /* GBAGameCore.h in Headers */ = {isa = PBXBuildFile; fileRef = BFE8E9CD1D010AF7009D623D /* GBAGameCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB55DFCC2E6EEF8D0028EDA9 /* Standard.dgmapping in Resources */ = {isa = PBXBuildFile; fileRef = EB55DFCA2E6EE7C80028EDA9 /* Standard.dgmapping */; };
 		EB55DFCD2E6EEF8D0028EDA9 /* Standard.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = BFD5EB221D305B48001487DC /* Standard.dgskin */; };
+		EB55E1EF2E7030760028EDA9 /* Standard_GBC.dgmapping in Resources */ = {isa = PBXBuildFile; fileRef = EB55E1ED2E7030760028EDA9 /* Standard_GBC.dgmapping */; };
+		EB55E1F02E7030760028EDA9 /* Standard_GBC.dgskin.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB55E1EE2E7030760028EDA9 /* Standard_GBC.dgskin.deltaskin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -561,6 +563,8 @@
 		BFE8E9CD1D010AF7009D623D /* GBAGameCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBAGameCore.h; sourceTree = "<group>"; };
 		BFE8E9CF1D010AF7009D623D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB55DFCA2E6EE7C80028EDA9 /* Standard.dgmapping */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Standard.dgmapping; sourceTree = "<group>"; };
+		EB55E1ED2E7030760028EDA9 /* Standard_GBC.dgmapping */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Standard_GBC.dgmapping; sourceTree = "<group>"; };
+		EB55E1EE2E7030760028EDA9 /* Standard_GBC.dgskin.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; name = Standard_GBC.dgskin.deltaskin; path = "Controller Skin/Standard_GBC.dgskin.deltaskin"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -609,6 +613,8 @@
 		BF0418121D01E63900E85BCF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB55E1ED2E7030760028EDA9 /* Standard_GBC.dgmapping */,
+				EB55E1EE2E7030760028EDA9 /* Standard_GBC.dgskin.deltaskin */,
 				EB55DFCA2E6EE7C80028EDA9 /* Standard.dgmapping */,
 				BFE8E9CF1D010AF7009D623D /* Info.plist */,
 				BFD5EB221D305B48001487DC /* Standard.dgskin */,
@@ -1350,6 +1356,8 @@
 				BF2882A71EB596870027FC53 /* Glsl.inl in Resources */,
 				BF2882E31EB596870027FC53 /* Vector3.inl in Resources */,
 				BF2882D91EB596870027FC53 /* Thread.inl in Resources */,
+				EB55E1EF2E7030760028EDA9 /* Standard_GBC.dgmapping in Resources */,
+				EB55E1F02E7030760028EDA9 /* Standard_GBC.dgskin.deltaskin in Resources */,
 				BF2882DF1EB596870027FC53 /* Utf.inl in Resources */,
 				BF2882AC1EB596870027FC53 /* Rect.inl in Resources */,
 			);
