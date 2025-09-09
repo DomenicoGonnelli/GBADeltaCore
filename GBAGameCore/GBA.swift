@@ -53,8 +53,8 @@ public struct GBA_GBC: DeltaCoreProtocol
 {
     public static let core = GBA_GBC()
     
-    public var name: String { "GBCDeltaCore" }
-    public var identifier: String { "com.rileytestut.GBCDeltaCore" }
+    public var name: String { "GBAGameCore" }
+    public var identifier: String { "com.domenico.gonnelli.core.gbc" }
     public var gameType: GameType { GameType.gbc }
     public var gameInputType: Input.Type { GBCGameInput.self }
     public var gameSaveFileExtension: String { "sav" }
@@ -74,6 +74,9 @@ public struct GBA_GBC: DeltaCoreProtocol
     private init()
     {
     }
+    
+    public var skinName: String { "Standard_GBC"}
+    public var mappingName: String { "Standard_GBC"}
 }
  
 
@@ -82,8 +85,8 @@ public struct GBA: DeltaCoreProtocol
     public static let core = GBA()
     public static let coreGBC = GBA_GBC.core
     
-    public var name: String { "GBADeltaCore" }
-    public var identifier: String { "com.rileytestut.GBADeltaCore" }
+    public var name: String { "GBAGameCore" }
+    public var identifier: String { "com.domenico.gonnelli.core.gba" }
     
     public var gameType: GameType { GameType.gba }
     public var gameInputType: Input.Type { GBAGameInput.self }
@@ -105,6 +108,9 @@ public struct GBA: DeltaCoreProtocol
     private init()
     {
     }
+    
+    public var skinName: String { "Standard" }
+    public var mappingName: String { "Standard" }
 }
 
 // Expose DeltaCore properties to Objective-C.

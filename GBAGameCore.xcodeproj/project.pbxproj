@@ -237,7 +237,7 @@
 		EB55DFCC2E6EEF8D0028EDA9 /* Standard.dgmapping in Resources */ = {isa = PBXBuildFile; fileRef = EB55DFCA2E6EE7C80028EDA9 /* Standard.dgmapping */; };
 		EB55DFCD2E6EEF8D0028EDA9 /* Standard.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = BFD5EB221D305B48001487DC /* Standard.dgskin */; };
 		EB55E1EF2E7030760028EDA9 /* Standard_GBC.dgmapping in Resources */ = {isa = PBXBuildFile; fileRef = EB55E1ED2E7030760028EDA9 /* Standard_GBC.dgmapping */; };
-		EB55E1F02E7030760028EDA9 /* Standard_GBC.dgskin.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB55E1EE2E7030760028EDA9 /* Standard_GBC.dgskin.deltaskin */; };
+		EB55E1F02E7030760028EDA9 /* Standard_GBC.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EB55E1EE2E7030760028EDA9 /* Standard_GBC.dgskin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -564,7 +564,7 @@
 		BFE8E9CF1D010AF7009D623D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB55DFCA2E6EE7C80028EDA9 /* Standard.dgmapping */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Standard.dgmapping; sourceTree = "<group>"; };
 		EB55E1ED2E7030760028EDA9 /* Standard_GBC.dgmapping */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Standard_GBC.dgmapping; sourceTree = "<group>"; };
-		EB55E1EE2E7030760028EDA9 /* Standard_GBC.dgskin.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; name = Standard_GBC.dgskin.deltaskin; path = "Controller Skin/Standard_GBC.dgskin.deltaskin"; sourceTree = "<group>"; };
+		EB55E1EE2E7030760028EDA9 /* Standard_GBC.dgskin */ = {isa = PBXFileReference; lastKnownFileType = file; name = Standard_GBC.dgskin; path = "Controller Skin/Standard_GBC.dgskin"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -614,7 +614,7 @@
 			isa = PBXGroup;
 			children = (
 				EB55E1ED2E7030760028EDA9 /* Standard_GBC.dgmapping */,
-				EB55E1EE2E7030760028EDA9 /* Standard_GBC.dgskin.deltaskin */,
+				EB55E1EE2E7030760028EDA9 /* Standard_GBC.dgskin */,
 				EB55DFCA2E6EE7C80028EDA9 /* Standard.dgmapping */,
 				BFE8E9CF1D010AF7009D623D /* Info.plist */,
 				BFD5EB221D305B48001487DC /* Standard.dgskin */,
@@ -1317,7 +1317,9 @@
 					};
 					BFE8E9C91D010AF7009D623D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = S797C2F3U5;
 						LastSwiftMigration = 1020;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -1357,7 +1359,7 @@
 				BF2882E31EB596870027FC53 /* Vector3.inl in Resources */,
 				BF2882D91EB596870027FC53 /* Thread.inl in Resources */,
 				EB55E1EF2E7030760028EDA9 /* Standard_GBC.dgmapping in Resources */,
-				EB55E1F02E7030760028EDA9 /* Standard_GBC.dgskin.deltaskin in Resources */,
+				EB55E1F02E7030760028EDA9 /* Standard_GBC.dgskin in Resources */,
 				BF2882DF1EB596870027FC53 /* Utf.inl in Resources */,
 				BF2882AC1EB596870027FC53 /* Rect.inl in Resources */,
 			);
@@ -1676,8 +1678,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = S797C2F3U5;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1686,6 +1690,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.domenico.gonnelli.core.gba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1696,8 +1701,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = S797C2F3U5;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1707,6 +1714,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.domenico.gonnelli.core.gba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
